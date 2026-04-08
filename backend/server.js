@@ -16,9 +16,9 @@ process.on("unhandledRejection", (err) => {
 
 // Middleware
 app.use(cors({
-  origin:"*",methods:["GET","POST","PUT","DELETE"],credentials:true
+  origin: "*",
+  methods: ["GET","POST","PUT","DELETE"]
 }));
-app.options("*", cors());
 app.use(express.json());
 
 // Test route
