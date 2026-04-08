@@ -33,3 +33,6 @@ app.use("/api/auth", authRoutes);
 const transactionRoutes = require("./routes/transactionRoutes");
 
 app.use("/api/transactions", transactionRoutes);
+app.get("/", (req, res) => {
+res.send("backend running...");
+});
