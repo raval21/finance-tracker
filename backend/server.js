@@ -9,11 +9,11 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
-// Middleware
-// app.use(cors({
-//   origin:"https://finance-tracker-silk-alpha.vercel.app",methods:["GET","POST","PUT","DELETE"], allowedHeaders:["Content-Type","Authorization"],credentials:true
-// }));
+
+Middleware
+app.use(cors({
+  origin:"https://finance-tracker-silk-alpha.vercel.app",methods:["GET","POST","PUT","DELETE"], allowedHeaders:["Content-Type","Authorization"],credentials:true
+}));
 
 app.use(express.json());
 
