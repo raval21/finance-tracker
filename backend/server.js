@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
-app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
 
 // DB
 mongoose.connect(process.env.MONGO_URI)
