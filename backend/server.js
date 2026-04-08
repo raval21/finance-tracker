@@ -28,8 +28,9 @@ app.get("/", (req, res) => {
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
+const transaction = require("./routes/transactionRoutes")
 app.use("/auth", authRoutes);
-
+app.use("/transactions", transaction )
 // DB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
