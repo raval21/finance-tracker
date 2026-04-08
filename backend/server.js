@@ -9,24 +9,7 @@ require("dotenv").config();
 
 const app = express();
 
-const allowedOrigins = [
-  "https://finance-tracker-silk-alpha.vercel.app","http://localhost:3000",
-  
-];
-
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      } else {
-        return callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  }),
-);
+app.use(cors());
 
 // app.use(cors({
 //   origin:"https://finance-tracker-silk-alpha.vercel.app",methods:["GET","POST","PUT","DELETE"], allowedHeaders:["Content-Type","Authorization"],credentials:true
@@ -58,5 +41,5 @@ res.send("backend running...");
 });
 
 // Server
-const PORT = process.env.PORT ;
+const PORT = process.env.PORT || 5000 ;
 app.listen(PORT, "0.0.0.0", () => console.log(`Server running on ${PORT}`));
