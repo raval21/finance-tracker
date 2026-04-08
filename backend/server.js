@@ -1,9 +1,10 @@
 require("dotenv").config();
 
 console.log("ENV VALUE:", process.env.MONGO_URI);
+const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+
 require("dotenv").config();
 
 const app = express();
