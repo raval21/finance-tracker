@@ -12,8 +12,9 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin:"https://finance-tracker-silk-alpha.vercel.app",methods:["GET","POST","PUT","DELETE"],credentials:true
+  origin:"https://finance-tracker-silk-alpha.vercel.app",methods:["GET","POST","PUT","DELETE"], allowedHeaders:["Content-Type","Authorization"],credentials:true
 }));
+add.options("*", cors());
 app.use(express.json());
 
 // Test route
