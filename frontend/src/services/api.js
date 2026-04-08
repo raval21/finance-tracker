@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // backend url
+  baseURL: "https://finance-tracker-production-d494.up.railway.app/api", // backend url
 });
 
 // Attach token automatically (later use)
